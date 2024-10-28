@@ -1,6 +1,12 @@
 <?php
 require_once('prelim.php');
 
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit(); 
+}
+
 $newconnection = new Connection();
 $categories = $newconnection->getCategories(); 
 
