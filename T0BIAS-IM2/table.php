@@ -186,9 +186,10 @@ $result = $stmt->fetchAll(PDO::FETCH_OBJ);
                         <td><?php echo $row->date_purchase; ?></td>
                         <td><?php echo $row->expiry_date; ?></td>
                         <td><?php echo $row->date_created; ?></td>
-                        <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#updateModal<?php echo $row->id; ?>">Edit</button></td>
-                    <?php include('edit_modal2.php'); ?>
-                    <td>
+                        <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal<?php echo $row->id; ?>">Edit</button>
+                        <?php include('edit_modal2.php'); ?> 
+                        
+                        <td>
                         <form action="" method="POST">
                             <button type="submit" name="delete_product" value="<?php echo $row->id; ?>" class="btn btn-danger">Delete</button>
                         </form>
