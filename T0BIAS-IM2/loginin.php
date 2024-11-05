@@ -63,11 +63,14 @@
 </head>
 <body>
     <div class="container">
+        <?php if (isset($_GET['error'])): ?>
+            <p style="color: red;"><?= htmlspecialchars($_GET['error']) ?></p>
+        <?php endif; ?>
         <form action="code.php" method="post">
             <label for="username">Username</label>
             <input type="text" name="username" id="username" placeholder="Enter your username">
             <label for="password">Password</label>
-            <input type="text" name="password" id="password" placeholder="Enter your password">
+            <input type="password" name="password" id="password" placeholder="Enter your password">
             <button type="submit" name="submit">Submit</button>
         </form>
         <div class="register-link">
