@@ -76,7 +76,7 @@ $result = $stmt->fetchAll(PDO::FETCH_OBJ);
 </head>
 <body>
 
-<div class="container"  style="background:rgb(165, 182, 141)">
+<div class="container"  style="background:rgba(146,220,233,255)">
     <form action="" method="POST" class="row g-3">
 
     <div class="col-md-12">
